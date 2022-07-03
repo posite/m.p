@@ -1,0 +1,24 @@
+package com.sys.project10_1
+
+import android.app.Activity
+import android.os.Bundle
+import android.widget.Button
+
+class SecondActivity : Activity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.second)
+
+
+        var btnReturn = findViewById<Button>(R.id.btnReturn)
+        var btnFinish = findViewById<Button>(R.id.finishB2)
+        btnReturn.setOnClickListener {
+            finish()
+        }
+        btnFinish.setOnClickListener {
+            finish()
+        }
+    }
+}

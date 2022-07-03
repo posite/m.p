@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnStart1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" 사진보기 시작 " />
+
+        <Button
+            android:id="@+id/btnStop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" 사진보기 종료 " />
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="1000">
+        <ImageView
+            android:id="@+id/Img1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/lollipop"/>
+        <ImageView
+            android:id="@+id/Img2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/marshmallow"/>
+        <ImageView
+            android:id="@+id/Img3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/nougat"/>
+        <ImageView
+            android:id="@+id/Img4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/oreo"/>
+        <ImageView
+            android:id="@+id/Img5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pie"/>
+
+    </ViewFlipper>
+
+</LinearLayout>
