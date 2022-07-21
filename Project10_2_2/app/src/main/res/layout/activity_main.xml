@@ -3,44 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/edtNum1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="숫자 1"/>
+        android:hint="숫자 1" />
 
     <EditText
         android:id="@+id/edtNum2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="숫자 1"/>
+        android:hint="숫자 1" />
+
     <RadioGroup
         android:id="@+id/calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/btnAdd"
-            android:text="더하기"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="더하기" />
+
+        <RadioButton
             android:id="@+id/btnSub"
-            android:text="빼기"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="빼기" />
+
+        <RadioButton
             android:id="@+id/btnMul"
-            android:text="곱하기"/>
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="곱하기" />
+
+        <RadioButton
             android:id="@+id/btnDiv"
-            android:text="나누기"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나누기" />
+
+        <RadioButton
+            android:id="@+id/btnRem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나머지" />
     </RadioGroup>
+
     <Button
         android:id="@+id/btnNewActivity"
         android:layout_width="match_parent"

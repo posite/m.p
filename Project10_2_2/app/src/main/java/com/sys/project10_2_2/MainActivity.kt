@@ -50,6 +50,13 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("Calculate", "div")
                     startActivityForResult(intent, 0)
                 }
+                R.id.btnRem -> {
+                    var intent = Intent(applicationContext, SecondActivity::class.java)
+                    intent.putExtra("Num1", Integer.parseInt(edtNum1.text.toString()))
+                    intent.putExtra("Num2", Integer.parseInt(edtNum2.text.toString()))
+                    intent.putExtra("Calculate", "rem")
+                    startActivityForResult(intent, 0)
+                }
             }
         }
     }

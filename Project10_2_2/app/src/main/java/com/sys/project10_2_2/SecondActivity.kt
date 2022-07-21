@@ -49,6 +49,13 @@ class SecondActivity : AppCompatActivity() {
                     setResult(Activity.RESULT_OK, outIntent)
                     finish()
                 }
+                "rem" -> {
+                    var resultValue = num1 % num2
+                    var outIntent = Intent(applicationContext, MainActivity::class.java)
+                    outIntent.putExtra("Result", resultValue)
+                    setResult(Activity.RESULT_OK, outIntent)
+                    finish()
+                }
             }
         }
     }
