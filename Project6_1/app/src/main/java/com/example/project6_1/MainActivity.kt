@@ -11,7 +11,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     lateinit var chrono : Chronometer
 
-    lateinit var rdoCal : RadioButton
+    lateinit var rdoDate : RadioButton
     lateinit var rdoTime : RadioButton
 
     lateinit var tPicker : TimePicker
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         chrono = findViewById<Chronometer>(R.id.chronometer1)
 
         // 라디오버튼 2개
-        rdoCal = findViewById<RadioButton>(R.id.rdoCal)
+        rdoDate = findViewById<RadioButton>(R.id.rdoCal)
         rdoTime = findViewById<RadioButton>(R.id.rdoTime)
 
         // FrameLayout의 3개 위젯
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         dPicker.init(cYear,cMonth,cDay){ view,year,monthOfYear,dayOfMonth->
             selectYear=year
-            selectMonth=monthOfYear
+            selectMonth=monthOfYear+1
             selectDay=dayOfMonth
         }
         // 처음에는 안보이게 설정
@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
         dPicker.visibility = View.INVISIBLE
 
         rdoTime.visibility = View.INVISIBLE
-        rdoCal.visibility = View.INVISIBLE
+        rdoDate.visibility = View.INVISIBLE
 
-        rdoCal.setOnClickListener {
+        rdoDate.setOnClickListener {
             tPicker.visibility = View.INVISIBLE
 
             dPicker.visibility = View.VISIBLE
@@ -83,9 +83,8 @@ class MainActivity : AppCompatActivity() {
             chrono.base = SystemClock.elapsedRealtime()
             chrono.start()
             chrono.setTextColor(Color.RED)
-            rdoCal.visibility=View.VISIBLE
+            rdoDate.visibility=View.VISIBLE
             rdoTime.visibility=View.VISIBLE
-
         }
 
         // 버튼을 클릭하면 날짜,시간을 가져온다.
@@ -103,11 +102,9 @@ class MainActivity : AppCompatActivity() {
             dPicker.visibility = View.INVISIBLE
 
             rdoTime.visibility = View.INVISIBLE
-            rdoCal.visibility = View.INVISIBLE
+            rdoDate.visibility = View.INVISIBLE
 
             return@setOnLongClickListener(true)
         }
-
-
     }
 }

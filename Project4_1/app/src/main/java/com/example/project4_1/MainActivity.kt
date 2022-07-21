@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             if(num1==""||num2==""){
                 Toast.makeText(applicationContext,"숫자를 입력하세요",Toast.LENGTH_SHORT).show()
             }else{
-                if(num2.toDouble()==0.0){
+                if(num2 == "0"){
                     Toast.makeText(applicationContext,"0으로 나눌 수 없음",Toast.LENGTH_SHORT).show()
                 }else{
                     result=num1.toDouble() / num2.toDouble()

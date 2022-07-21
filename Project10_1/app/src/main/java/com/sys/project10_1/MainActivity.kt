@@ -17,15 +17,12 @@ class MainActivity : AppCompatActivity() {
         rdoGroup=findViewById<RadioGroup>(R.id.rdoGroup)
         var btnNewActivity = findViewById<Button>(R.id.btnNewActivity)
         btnNewActivity.setOnClickListener {
-
-            if(rdoGroup.checkedRadioButtonId==R.id.secondB){
-                var intent = Intent(applicationContext, SecondActivity::class.java)
-                startActivity(intent)
-            }else if(rdoGroup.checkedRadioButtonId==R.id.thirdB){
-                var intent = Intent(applicationContext, ThirdActivity::class.java)
-                startActivity(intent)
+            when(rdoGroup.checkedRadioButtonId){
+                R.id.secondB ->{var intent = Intent(applicationContext, SecondActivity::class.java)
+                    startActivity(intent)}
+                R.id.thirdB -> {var intent = Intent(applicationContext, ThirdActivity::class.java)
+                    startActivity(intent)}
             }
-
         }
     }
 }

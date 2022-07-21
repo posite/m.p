@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         btnMul = findViewById<Button>(R.id.BtnMul)
         btnDiv = findViewById<Button>(R.id.BtnDiv)
         textResult = findViewById<TextView>(R.id.TextResult)
+
         btnAdd.setOnTouchListener { view, motionEvent ->
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             textResult.text = "계산 결과 : " + result.toString()
             false
         }
+
         btnSub.setOnTouchListener { view, motionEvent ->
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
@@ -48,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             textResult.text = "계산 결과 : " + result.toString()
             false
         }
+
         btnMul.setOnTouchListener { view, motionEvent ->
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             textResult.text = "계산 결과 : " + result.toString()
             false
         }
+
         btnDiv.setOnTouchListener { view, motionEvent ->
             num1 = edit1.text.toString()
             num2 = edit2.text.toString()
@@ -62,6 +66,7 @@ class MainActivity : AppCompatActivity() {
             textResult.text = "계산 결과 : " + result.toString()
             false
         }
+
         for (i in 0..9 step 1){
             numButtons.add( findViewById<Button>(numBtnIDs[i]) )
         }

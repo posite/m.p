@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         btnStart = findViewById<Button>(R.id.btnStart1)
         btnStop = findViewById<Button>(R.id.btnStop1)
         vFlipper = findViewById<ViewFlipper>(R.id.viewFlipper1)
-        vFlipper.flipInterval=3000
+        vFlipper.flipInterval=2000
 
         btnStart.setOnClickListener {
             vFlipper.startFlipping()

@@ -8,18 +8,43 @@
     <EditText
         android:id="@+id/edtNum1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </EditText>
+        android:layout_height="wrap_content"
+        android:hint="숫자 1"/>
 
     <EditText
         android:id="@+id/edtNum2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:hint="숫자 1"/>
+    <RadioGroup
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:text="더하기"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSub"
+            android:text="빼기"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMul"
+            android:text="곱하기"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDiv"
+            android:text="나누기"/>
+    </RadioGroup>
     <Button
         android:id="@+id/btnNewActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="더하기" />
+        android:text="계산하기" />
 
 </LinearLayout>

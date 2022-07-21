@@ -12,8 +12,7 @@
             android:id="@+id/secondB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Second activity">>
-
+            android:text="Second activity">
         </RadioButton>
         <RadioButton
             android:id="@+id/thirdB"

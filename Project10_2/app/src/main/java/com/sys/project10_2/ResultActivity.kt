@@ -52,9 +52,7 @@ class ResultActivity : AppCompatActivity() {
 
         var btnReturn = findViewById<Button>(R.id.btnReturn)
         btnReturn.setOnClickListener {
-            finishAffinity();
-            System.runFinalization();
-            System.exit(0);
+            finish()
         }
 
     }

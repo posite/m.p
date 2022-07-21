@@ -36,13 +36,14 @@ class MainActivity : AppCompatActivity() {
             var dlg = AlertDialog.Builder(this@MainActivity)
             dlg.setTitle("사용자 정보 입력")
             dlg.setView(dialogView)
+            dlg.setIcon(R.drawable.ic_menu_allfriends)
             dlgEdtName = dialogView.findViewById<EditText>(R.id.dlgEdt1)
             dlgEdtEmail = dialogView.findViewById<EditText>(R.id.dlgEdt2)
+
             dlgEdtName.text=edName.text
             dlgEdtEmail.text=edEmail.text
+
             dlg.setPositiveButton("확인") { dialog, which ->
-
-
                 edName.text = dlgEdtName.text
                 edEmail.text = dlgEdtEmail.text
             }

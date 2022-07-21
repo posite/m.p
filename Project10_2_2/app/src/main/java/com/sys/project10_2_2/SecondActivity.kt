@@ -14,14 +14,42 @@ class SecondActivity : AppCompatActivity() {
         title = "Second 액티비티"
 
         var inIntent = intent
-        var hapValue = inIntent.getIntExtra("Num1", 0) + inIntent.getIntExtra("Num2", 0)
+        var num1 = inIntent.getIntExtra("Num1", 0)
+        var num2 = inIntent.getIntExtra("Num2", 0)
+        var calc = inIntent.getStringExtra("Calculate")
 
         var btnReturn = findViewById<Button>(R.id.btnReturn)
         btnReturn.setOnClickListener {
-            var outIntent = Intent(applicationContext, MainActivity::class.java)
-            outIntent.putExtra("Hap", hapValue)
-            setResult(Activity.RESULT_OK, outIntent)
-            finish()
+            when (calc) {
+                "add" -> {
+                    var resultValue = num1 + num2
+                    var outIntent = Intent(applicationContext, MainActivity::class.java)
+                    outIntent.putExtra("Result", resultValue)
+                    setResult(Activity.RESULT_OK, outIntent)
+                    finish()
+                }
+                "sub" -> {
+                    var resultValue = num1 - num2
+                    var outIntent = Intent(applicationContext, MainActivity::class.java)
+                    outIntent.putExtra("Result", resultValue)
+                    setResult(Activity.RESULT_OK, outIntent)
+                    finish()
+                }
+                "mul" -> {
+                    var resultValue = num1 * num2
+                    var outIntent = Intent(applicationContext, MainActivity::class.java)
+                    outIntent.putExtra("Result", resultValue)
+                    setResult(Activity.RESULT_OK, outIntent)
+                    finish()
+                }
+                "div" -> {
+                    var resultValue = num1 / num2
+                    var outIntent = Intent(applicationContext, MainActivity::class.java)
+                    outIntent.putExtra("Result", resultValue)
+                    setResult(Activity.RESULT_OK, outIntent)
+                    finish()
+                }
+            }
         }
     }
 }
